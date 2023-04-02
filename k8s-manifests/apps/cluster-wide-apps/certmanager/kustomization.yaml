@@ -4,4 +4,4 @@ kind: Kustomization
 namespace: certmanager
 resources:
   - https://github.com/cert-manager/cert-manager/releases/download/v1.11.0/cert-manager.yaml
-  - ca-issuers.yml
+  - ca-issuers.yaml
