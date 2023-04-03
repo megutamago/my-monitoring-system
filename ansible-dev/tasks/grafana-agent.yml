@@ -19,3 +19,16 @@
   apt:
     name:
     - grafana-agent
+  ignore_errors: yes
+
+- name: Copy ha-backup.sh
+  copy:
+    src: "./files/grafana-agent.yaml"
+    dest: /etc/
+    mode: '0755'
+
+- name: grafana-agent is running
+  systemd:
+    name: grafana-agent
+    state: started
+    enabled: true
