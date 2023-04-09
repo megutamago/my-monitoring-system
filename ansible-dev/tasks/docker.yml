@@ -1,4 +1,4 @@
- name: install packages
+- name: install packages
   apt:
     name:
     - ca-certificates
