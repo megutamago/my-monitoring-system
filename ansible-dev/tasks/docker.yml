@@ -26,3 +26,7 @@
     - containerd.io
     - docker-compose-plugin
   ignore_errors: yes
+
+### docker-compose
+- name: Install docker-compose
+  shell: curl -SL https://github.com/docker/compose/releases/download/v2.17.2/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose

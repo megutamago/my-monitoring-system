@@ -1,16 +1,10 @@
-- name: gpg
-  shell: sudo gpg --no-default-keyring --keyring /usr/share/keyrings/k6-archive-keyring.gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys C5AD17C747E3415A3642D57D77C6C491D6AC1D69
+- name: wget
+  shell: wget https://github.com/grafana/k6/releases/download/v0.43.1/k6-v0.43.1-linux-amd64.deb
 
-- name: echo
-  shell: echo "deb [signed-by=/usr/share/keyrings/k6-archive-keyring.gpg] https://dl.k6.io/deb stable main" | sudo tee /etc/apt/sources.list.d/k6.list
+- name: install
+  shell: apt install -y ./k6-v0.43.1-linux-amd64.deb
 
-- name: Update Upgrade
-  apt:
-    upgrade: yes
-    update_cache: true
-
-- name: Install the package
-  apt:
-    name:
-    - k6
-  ignore_errors: yes
+- name: remove file
+  file: 
+    path: ./k6-v0.43.1-linux-amd64.deb
+    state: absent
