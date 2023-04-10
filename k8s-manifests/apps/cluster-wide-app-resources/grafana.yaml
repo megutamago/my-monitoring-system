@@ -54,16 +54,6 @@ spec:
               basicAuth: false
               version: 1
               editable: false
-              jsonData:
-                httpMethod: GET
-                serviceMap:
-                  datasourceUid: Prometheus
-                search:
-                  hide: false
-                nodeGraph:
-                  enabled: true
-                lokiSearch:
-                  datasourceUid: 'Loki'
         dashboards:
           default:
             prometheus-stats:
