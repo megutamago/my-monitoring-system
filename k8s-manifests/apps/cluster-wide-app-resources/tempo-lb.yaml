@@ -6,9 +6,9 @@ metadata:
 spec:
   ports:
   - name: http
-    port: *
+    port: 4317
     protocol: TCP
-    targetPort: *
+    targetPort: 4317
   selector:
     app.kubernetes.io/component: distributor
     app.kubernetes.io/instance: tempo-distributed
