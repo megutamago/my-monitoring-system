@@ -6,12 +6,12 @@ metadata:
 spec:
   ports:
   - name: http
-    port: 3100
+    port: *
     protocol: TCP
-    targetPort: 3100
+    targetPort: *
   selector:
     app.kubernetes.io/component: distributor
-    app.kubernetes.io/instance: tempo
+    app.kubernetes.io/instance: tempo-distributed
     app.kubernetes.io/name: tempo
   type: LoadBalancer
   loadBalancerIP: 192.168.11.145
