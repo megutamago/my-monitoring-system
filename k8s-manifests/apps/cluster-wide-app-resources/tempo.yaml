@@ -8,7 +8,7 @@ spec:
   source:
     chart: tempo-distributed
     repoURL: https://grafana.github.io/helm-charts
-    targetRevision: 1.2.4
+    targetRevision: 1.4.8
     helm:
       releaseName: tempo-distributed
       values: |
